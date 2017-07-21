@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
     <title>This is your data</title>
 </head>
-<body>
+<body bgcolor="lightyellow">
+{% for x in df%}
+<p></p>
+{% endfor %}
 <div>
-    <p style="Arial">This is your data</p>
+    <p align="Center">This is your data</p>
+    <hr/>
     <div class="output">
     <pre>{{df}}</pre>
     </div>
     <div class="output">
-        <p>These are your Variables</p>
+        <p align="Center">These are your Variables</p>
+        <hr/><img align="right" width=800 height=600 src="{%static "/image/1.jpg" %}" />
     <pre>{{col}}</pre>
     </div>
 </div>
+<div>
 <a href="ttest/" target="_blank">t检验</a><br>
 <a href="chiq2/" target="_blank">卡方检验</a><br>
-<a href="corr/" target="_blank">相关性</a>
+<a href="corr/" target="_blank">相关性检验</a>
+</div>
+
 </body>
 </html>

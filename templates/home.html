@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Luwak Stat!</title>
 </head>
-<body>
+<body  bgcolor="lightyellow" >
   <div>
-   <h1>
-    Welcome to Luwak Stat!
+   <h1 align="center">
+    Welcome to Luwak Stat!<br>
+        <img src="{% static "image/luwak.jpg" %}"
+             width="300" height="220" align="center"/>
+       <hr/>
    </h1>
-      <form action="/data/" method="get">
+      <form action=" " target="_blank" method="get">
           <label for="d">Input Data:</label>
         <input  type="text" size=45 id="d"
                name="d" value="/Users/huangyi-mac/mystat/mystat/input_data/C13_data9.csv">
         <br><input type="submit" value="Submit" >
     </form>
+      <pre>{{df}}</pre>
+      <hr/>
+      <pre>{{col}}</pre>
+      <hr/>
       <a href="https://www.dhcc.com.cn" target="_blank">东华医疗</a>
+      <hr/>
   </div>
 
 </body>
